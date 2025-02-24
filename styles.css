@@ -1,0 +1,89 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+#attempts {
+    margin-bottom: 20px;
+    font-size: 1.2em;
+}
+
+#attempts span {
+    color: black;
+}
+
+#attempts span.red {
+    color: red;
+}
+
+#board {
+    display: grid;
+    grid-template-columns: repeat(10, 40px);
+    /* 9 colunas + 1 para os números */
+    grid-template-rows: repeat(10, 40px);
+    /* 9 linhas + 1 para os números */
+    gap: 2px;
+    background-color: #fff;
+    padding: 10px;
+    border: 2px solid #000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.cell {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background-color: #e0e0e0;
+}
+
+.cell.hit {
+    background-color: green;
+}
+
+.cell.miss {
+    background-color: red;
+}
+
+.cell.disabled {
+    pointer-events: none;
+    background-color: #ccc;
+}
+
+.cell:hover {
+    border: 2px solid green;
+}
+
+.row-label,
+.col-label {
+    font-weight: bold;
+    background-color: #f0f0f0;
+}
+
+#ships-remaining {
+    margin-top: 20px;
+    font-size: 1.2em;
+    background-color: #fff;
+    padding: 10px;
+    border: 2px solid #000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#ships-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#ships-list li {
+    margin: 5px 0;
+}
